@@ -47,13 +47,17 @@
     <div class="row">
         <div th:each="gif : ${gifs}" class="col s12 l4">
             <a th:href="@{|/gif/${gif.name}|}">
-                <img th:src="${gif.getFilePath()}"/>
-                <!--                    <a href="#" th:class="(${gif.favorite}? 'un' : '') + 'mark favorite'"></a>-->
+                <img th:src="${gif.getFilePath()}">
             </a>
         </div>
     </div>
 </div>
 
+<!--a th:href="@{/dupa}">
+    <img th:src="@{/gifs/ben-and-mike.gif}">
+</a-->
+<!--<h1>dfsjhgsdfjhsdhjkgdhkjdfsf</h1>-->
+<!--<h1>dfsjhgsdfjhsdhjkgdhkjdfsf</h1>-->
 
 <script th:src="@{/vendor/jquery/jquery-1.11.3.js}"></script>
 <script th:src="@{/vendor/materialize/js/materialize.js}"></script>

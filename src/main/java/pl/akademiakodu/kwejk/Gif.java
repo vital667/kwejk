@@ -11,6 +11,8 @@ import java.util.List;
 public class Gif {
 
     private String name;
+    private boolean favorite;
+    private int category;
 
     public String getFilePath(){
         return "/gifs/"+name+".gif";
@@ -24,12 +26,12 @@ public class Gif {
     //hard kodowanie danych
     //symulacja bazy danych
     static{
-        GIFS.add(new Gif("android-explosion"));
-        GIFS.add(new Gif("ben-and-mike"));
-        GIFS.add(new Gif("book-dominos"));
-        GIFS.add(new Gif("compiler-bot"));
-        GIFS.add(new Gif("cowboy-coder"));
-        GIFS.add(new Gif("infinite-andrew"));
+        GIFS.add(new Gif("android-explosion",true,1));
+        GIFS.add(new Gif("ben-and-mike",false,1));
+        GIFS.add(new Gif("book-dominos",true,2));
+        GIFS.add(new Gif("compiler-bot",false,2));
+        GIFS.add(new Gif("cowboy-coder",true,3));
+        GIFS.add(new Gif("infinite-andrew",true,3));
     }
 
 }
