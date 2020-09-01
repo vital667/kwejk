@@ -32,10 +32,6 @@ public class CategoriesController {
 
     @GetMapping("/category/{number}")
     public String getCategories(@PathVariable int number, ModelMap map) {
-//        for (Category category : Category.CATEGORIES)
-//            if (category.getId() == number)
-//                map.put("category", category);
-
             map.put("category",((List<Category>)categoryRepository.findAll())
                     .stream().
                     filter(category -> category.getId()==number).findFirst().get());
@@ -43,13 +39,6 @@ public class CategoriesController {
             map.put("gifs",((List<Gif>)gifRepository.findAll())
             .stream()
             .filter(gif -> gif.getCategory()==number).collect(Collectors.toList()));
-
-//        List<Gif> list = new ArrayList<>();
-//        for (Gif gif : Gif.GIFS)
-//            if (gif.getCategory() == number)
-//                list.add(gif);
-//        map.put("gifs", list);
-
         return "category";
     }
 }
